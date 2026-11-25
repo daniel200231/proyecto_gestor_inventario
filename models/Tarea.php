@@ -13,7 +13,7 @@ class Tarea
     //DEVUELVE LAS TAREAS GUARDADAS,DE MAS RECIENTE A MAS ANTIGUA
     public function obtenerTareas(): array
     {
-       $stmt = $this->db->query("SELECT * FROM tareas");
+       $stmt = $this->db->query("SELECT * FROM tareas ORDER BY creado_en DESC, id DESC");
        return $stmt->fetchAll();
     }
     //INSTERTA NUEVA TAREA MAS DESCRIPCION LA CUAL DEVUELVE TRUE SI SE GUARDA BIEN 
@@ -25,7 +25,7 @@ class Tarea
     //CAMBIA EL ESTADO DE UNA TAREA SI ESTA PENDIENTE O COMPLETADA
     public function cambiarEstado(int $id):void
     {
-        $stmt = $this->db->prepare("UPDATE tareas SET Estado = IF(Estado = 'pendiente', 'completada', 'pendiente') WHERE id = :id");
+        $stmt = $this->db->prepare("UPDATE tareas SET estado = IF(estado = 'pendiente', 'completada', 'pendiente') WHERE id = :id");
         $stmt->execute(['id' => $id]);
     }
     public function eliminarTarea(int $id): void

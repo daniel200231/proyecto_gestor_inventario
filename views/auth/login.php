@@ -12,11 +12,7 @@ unset($_SESSION['error'], $_SESSION['exito']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesión | GESTIUM</title>
-<link rel="stylesheet" href="public/css/variables.css">
-<link rel="stylesheet" href="public/css/base.css">
-<link rel="stylesheet" href="public/css/auth.css">
-<link rel="stylesheet" href="public/css/dashboard.css">
-<link rel="stylesheet" href="public/css/responsive.css">
+<link rel="stylesheet" href="public/style.css">
 </head>
 
 <body class="auth-body">

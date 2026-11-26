@@ -1,3 +1,30 @@
+@media (max-width: 900px) {
+  .dashboard-body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .dashboard-main {
+    padding: 24px 16px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .task-create-form,
+  .task-toolbar,
+  .filtros {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 650px) {
   .auth-card {
     padding: 25px 20px;

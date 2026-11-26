@@ -1,0 +1,27 @@
+@media (max-width: 650px) {
+  .auth-card {
+    padding: 25px 20px;
+  }
+
+  .panel-header {
+    padding: 17px;
+  }
+
+  .panel-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .panel-container > form {
+    flex-direction: column;
+  }
+
+  li {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .tarea-acciones {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}

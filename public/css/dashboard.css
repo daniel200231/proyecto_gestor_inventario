@@ -1,0 +1,442 @@
+.dashboard-body {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* MENÚ LATERAL */
+
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.sidebar-brand {
+  color: var(--text);
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 45px;
+}
+
+.sidebar-brand span {
+  color: var(--gold);
+}
+
+.sidebar-brand small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.62rem;
+  letter-spacing: 3px;
+  margin-top: 5px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 13px 15px;
+  border-radius: 9px;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.nav-link span {
+  margin-right: 10px;
+  color: var(--gold);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: rgba(214, 173, 96, 0.12);
+  color: var(--gold);
+}
+
+.sidebar-user {
+  margin-top: auto;
+  padding: 20px 0;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(214, 173, 96, 0.15);
+  color: var(--gold);
+  font-weight: 800;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.user-details strong {
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
+}
+
+.user-details small {
+  color: var(--muted);
+}
+
+.logout-form {
+  margin: 0;
+}
+
+.logout-button {
+  width: 100%;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+
+.logout-button:hover {
+  background: rgba(227, 93, 104, 0.12);
+  color: #ff858e;
+  border-color: var(--danger);
+}
+
+/* CONTENIDO PRINCIPAL */
+
+.dashboard-main {
+  flex: 1;
+  min-width: 0;
+  padding: 35px 45px;
+}
+
+.dashboard-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 35px;
+}
+
+.topbar-label {
+  color: var(--gold);
+  font-size: 0.68rem;
+  letter-spacing: 2px;
+  margin-bottom: 7px;
+}
+
+.dashboard-topbar h1 {
+  font-size: 1.6rem;
+}
+
+.topbar-date {
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+}
+
+.welcome-section {
+  margin-bottom: 25px;
+}
+
+.welcome-section h2 {
+  font-size: 1.45rem;
+  margin-bottom: 8px;
+}
+
+/* ESTADÍSTICAS */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.stat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 23px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stat-label {
+  color: var(--muted);
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.stat-number {
+  font-size: 2rem;
+  color: var(--text);
+}
+
+.pending-number {
+  color: var(--pendiente);
+}
+
+.completed-number {
+  color: var(--completada);
+}
+
+.stat-description {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+/* PROGRESO */
+
+.progress-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 23px;
+  margin-bottom: 45px;
+}
+
+.progress-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.progress-heading h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.progress-heading > strong {
+  color: var(--gold);
+  font-size: 1.4rem;
+}
+
+.progress-track {
+  width: 100%;
+  height: 9px;
+  background: #292f3b;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--gold);
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+.progress-caption {
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin-top: 12px;
+}
+
+/* TAREAS */
+
+.section-heading {
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  font-size: 1.4rem;
+  margin-bottom: 7px;
+}
+
+.task-create-form {
+  display: flex;
+  gap: 12px;
+  padding: 18px;
+  margin-bottom: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.task-create-form input {
+  flex: 1;
+  min-width: 0;
+}
+
+.task-create-form button {
+  white-space: nowrap;
+}
+
+.task-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.task-toolbar input {
+  max-width: 330px;
+}
+
+.task-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-button {
+  background: var(--surface);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 9px 13px;
+  font-size: 0.78rem;
+}
+
+.filter-button.active,
+.filter-button:hover {
+  background: rgba(214, 173, 96, 0.12);
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+/* LISTA DE TAREAS */
+
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.task-list li {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--pendiente);
+  border-radius: 11px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  transition: 0.2s;
+}
+
+.task-list li:hover {
+  background: var(--card-hover);
+}
+
+.task-list li.completada {
+  border-left-color: var(--completada);
+}
+
+.tarea-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.tarea-titulo {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.task-list li.completada .tarea-titulo {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.tarea-descripcion {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.badge {
+  width: fit-content;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.badge.pendiente {
+  background: rgba(230, 167, 68, 0.13);
+  color: var(--pendiente);
+}
+
+.badge.completada {
+  background: rgba(66, 184, 131, 0.13);
+  color: var(--completada);
+}
+
+.tarea-acciones {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+}
+
+.tarea-acciones form {
+  margin: 0;
+}
+
+.tarea-acciones button {
+  font-size: 0.78rem;
+  padding: 9px 12px;
+}
+
+.action-button {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+}
+
+.action-button:hover {
+  background: var(--gold);
+  color: #17130b;
+}
+
+.delete-button {
+  background: rgba(227, 93, 104, 0.12);
+  color: #ff858e;
+  border: 1px solid rgba(227, 93, 104, 0.3);
+}
+
+.delete-button:hover {
+  background: var(--danger);
+  color: white;
+}
+
+.vacio {
+  text-align: center;
+  color: var(--muted);
+  padding: 40px 20px;
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+}
+
+.vacio h3 {
+  margin-bottom: 8px;
+}
+
+.vacio p {
+  font-size: 0.88rem;
+}

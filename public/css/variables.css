@@ -1,0 +1,30 @@
+:root {
+  /* Colores principales */
+  --bg: #090b10;
+  --surface: #11151e;
+  --card: #171c27;
+  --card-hover: #1d2431;
+
+  /* Texto */
+  --text: #f2f2f2;
+  --muted: #9299a8;
+
+  /* Dorados */
+  --gold: #d6ad60;
+  --gold-light: #f0cc83;
+
+  /* Estados */
+  --pendiente: #e6a744;
+  --completada: #42b883;
+  --danger: #e35d68;
+
+  /* Bordes */
+  --border: #29303d;
+
+  /* Sombras */
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+
+  /* Bordes redondeados */
+  --radius: 12px;
+  --radius-large: 17px;
+}

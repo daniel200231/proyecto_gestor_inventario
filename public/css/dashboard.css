@@ -293,6 +293,26 @@
   max-width: 330px;
 }
 
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-bottom: 20px;
+}
+
+.filtro-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filtro-label {
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
 .task-filters {
   display: flex;
   gap: 8px;
@@ -367,6 +387,16 @@
   font-size: 0.86rem;
 }
 
+.tarea-fecha {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.task-list li.oculta,
+.filtro-vacio[hidden] {
+  display: none !important;
+}
+
 .badge {
   width: fit-content;
   font-size: 0.68rem;
@@ -439,4 +469,13 @@
 
 .vacio p {
   font-size: 0.88rem;
+}
+
+.aviso {
+  color: #ff858e;
+  background: rgba(227, 93, 104, 0.12);
+  border: 1px solid rgba(227, 93, 104, 0.3);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  margin-bottom: 18px;
 }

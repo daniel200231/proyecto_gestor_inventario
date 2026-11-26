@@ -23,6 +23,25 @@ body {
   padding: 48px 24px;
 }
 
+/* ===== Sesión ===== */
+.sesion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 18px;
+}
+
+.sesion a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.sesion a:hover {
+  text-decoration: underline;
+}
+
 /* ===== Encabezado ===== */
 h1 {
   font-size: 1.75rem;

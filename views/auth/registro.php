@@ -1,4 +1,3 @@
-
 <?php
 $error = $_SESSION['error'] ?? null;
 unset($_SESSION['error']);
@@ -10,11 +9,13 @@ unset($_SESSION['error']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear cuenta | GESTIUM</title>
-<link rel="stylesheet" href="/public/css/variables.css">
-<link rel="stylesheet" href="/public/css/base.css">
-<link rel="stylesheet" href="/public/css/auth.css">
-<link rel="stylesheet" href="/public/css/dashboard.css">
-<link rel="stylesheet" href="/public/css/responsive.css">
+    <link rel="stylesheet" href="public/css/variables.css">
+    <link rel="stylesheet" href="public/css/base.css">
+    <link rel="stylesheet" href="public/css/auth.css">
+    <link rel="stylesheet" href="public/css/dashboard.css">
+    <link rel="stylesheet" href="public/css/responsive.css">
+</head>
+<body class="auth-body">
     <main class="auth-container">
         <div class="auth-logo">GESTIUM<span>.</span></div>
         <p class="auth-subtitle">GESTIÓN INTELIGENTE DE EQUIPOS</p>
@@ -25,7 +26,7 @@ unset($_SESSION['error']);
 
             <?php if ($error): ?>
                 <div class="auth-error">
-                    <?= htmlspecialchars($error) ?>
+                    <?= htmlspecialchars($error, ENT_QUOTES, 'UTF-8') ?>
                 </div>
             <?php endif; ?>
 
@@ -61,6 +62,5 @@ unset($_SESSION['error']);
 
         <p class="auth-copyright">© 2026 GESTIUM. Todos los derechos reservados.</p>
     </main>
-
 </body>
 </html>

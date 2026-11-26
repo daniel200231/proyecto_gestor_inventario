@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="public/style.css">
 </head>
 <body>
+    <?php if (!empty($_SESSION['usuario'])): ?>
+        <p class="sesion">
+            <?= htmlspecialchars($_SESSION['usuario']['nombre']) ?>
+            <a href="index.php?accion=logout">Cerrar sesión</a>
+        </p>
+    <?php endif; ?>
     <h1>Gestor de Tareas</h1>
     <p class="subtitulo"><?= count($tareas ?? []) ?> tarea(s) registrada(s)</p>
 
